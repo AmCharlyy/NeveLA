@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayoreo Moda - Proveedor de Ropa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <i class="fas fa-tshirt"></i> Mayoreo Moda
+        </a>
+        <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Ropa al Mayoreo</h1>
+        <p>Los mejores precios para revendedores. Compra por volumen y aumenta tus ganancias.</p>
+    </section>
+
+    <main>
+        <div class="products-grid" id="productsGrid">
+            <!-- Productos se agregarán dinámicamente con JavaScript -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> Tel: 55 1234 5678</p>
+                <p><i class="fas fa-mobile-alt"></i> WhatsApp: 55 8765 4321</p>
+                <p><i class="fas fa-envelope"></i> Email: ventas@mayoreomoda.com</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                <p>Sábado: 10:00 - 14:00</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Insurgentes Sur 1234</p>
+                <p>Col. Roma Norte, CDMX</p>
+                <p>CP 06700</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.1/mercadopago/logo_mp.svg" alt="Mercado Pago">
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Mayoreo Moda. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Tu Pedido</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Ítems del carrito se agregarán dinámicamente -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i> Pagar con Mercado Pago
+            </button>
+            <div id="wallet_container" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        Producto agregado al carrito!
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
